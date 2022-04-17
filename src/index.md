@@ -1,6 +1,6 @@
 ---
 page: true
-title: Vue.js - 渐进式 JavaScript 框架
+title: Talexs - 超乎想象的Java框架
 ---
 
 <script setup>

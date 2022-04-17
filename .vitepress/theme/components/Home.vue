@@ -1,21 +1,22 @@
-<script setup lang="ts">
-import NewsLetter from './NewsLetter.vue'
-import SponsorsGroup from './SponsorsGroup.vue';
-import VueMasteryModal from './VueMasteryModal.vue';
-</script>
-
 <template>
   <section id="hero">
     <h1 class="tagline">
-      <span class="accent">渐进式</span>
-      <br />JavaScript 框架
+      <span class="accent">超乎想象</span>
+      <br />Java-SpringBoot 框架
     </h1>
     <p class="description">
-      一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。
+      一款用于构建 Web 后端，基于插件，功能强大，简洁精炼的框架。
     </p>
     <p class="actions">
-      <vue-mastery-modal />
-      <a class="get-started" href="/guide/introduction.html">
+      <!-- <vue-mastery-modal /> -->
+      <a
+        style="
+          background-color: var(--vt-c-blue);
+          color: var(--vt-c-white);
+        "
+        class="get-started"
+        href="/guide/introduction.html"
+      >
         快速开始
         <svg
           class="icon"
@@ -35,53 +36,179 @@ import VueMasteryModal from './VueMasteryModal.vue';
 
   <!-- TODO make dynamic based on data -->
   <section id="special-sponsor">
-    <span>特别赞助</span>
-    <a href="https://www.dcloud.io/hbuilderx.html?hmsr=vue-en&hmpl=&hmcu=&hmkw=&hmci=">
-      <picture>
-        <source type="image/avif" srcset="/images/sponsors/hbuilder.avif" />
-        <img
-          alt="hbuilder logo"
-          width="97"
-          height="36"
-          src="/images/sponsors/hbuilder.png"
-        />
-      </picture>
+    <span>鸣谢</span>
+    <a
+      href="https://www.jetbrains.com/idea/"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        class="idea-logo"
+        id="Layer_1"
+        x="0px"
+        y="0px"
+        viewBox="0 0 70 70"
+        style="enable-background: new 0 0 70 70"
+        xml:space="preserve"
+      >
+        <g>
+          <g>
+            <linearGradient
+              id="SVGID_1_"
+              gradientUnits="userSpaceOnUse"
+              x1="0.7898"
+              y1="40.0893"
+              x2="33.3172"
+              y2="40.0893"
+            >
+              <stop offset="0.2581" style="stop-color: #f97a12" />
+              <stop offset="0.4591" style="stop-color: #b07b58" />
+              <stop offset="0.7241" style="stop-color: #577bae" />
+              <stop offset="0.9105" style="stop-color: #1e7ce5" />
+              <stop offset="1" style="stop-color: #087cfa" />
+            </linearGradient>
+            <polygon
+              style="fill: url(#SVGID_1_)"
+              points="17.7,54.6 0.8,41.2 9.2,25.6 33.3,35   "
+            />
+            <linearGradient
+              id="SVGID_2_"
+              gradientUnits="userSpaceOnUse"
+              x1="25.7674"
+              y1="24.88"
+              x2="79.424"
+              y2="54.57"
+            >
+              <stop offset="0" style="stop-color: #f97a12" />
+              <stop offset="7.179946e-002" style="stop-color: #cb7a3e" />
+              <stop offset="0.1541" style="stop-color: #9e7b6a" />
+              <stop offset="0.242" style="stop-color: #757b91" />
+              <stop offset="0.3344" style="stop-color: #537bb1" />
+              <stop offset="0.4324" style="stop-color: #387ccc" />
+              <stop offset="0.5381" style="stop-color: #237ce0" />
+              <stop offset="0.6552" style="stop-color: #147cef" />
+              <stop offset="0.7925" style="stop-color: #0b7cf7" />
+              <stop offset="1" style="stop-color: #087cfa" />
+            </linearGradient>
+            <polygon
+              style="fill: url(#SVGID_2_)"
+              points="70,18.7 68.7,59.2 41.8,70 25.6,59.6 49.3,35 38.9,12.3 48.2,1.1   "
+            />
+            <linearGradient
+              id="SVGID_3_"
+              gradientUnits="userSpaceOnUse"
+              x1="63.2277"
+              y1="42.9153"
+              x2="48.2903"
+              y2="-1.7191"
+            >
+              <stop offset="0" style="stop-color: #fe315d" />
+              <stop offset="7.840246e-002" style="stop-color: #cb417e" />
+              <stop offset="0.1601" style="stop-color: #9e4e9b" />
+              <stop offset="0.2474" style="stop-color: #755bb4" />
+              <stop offset="0.3392" style="stop-color: #5365ca" />
+              <stop offset="0.4365" style="stop-color: #386ddb" />
+              <stop offset="0.5414" style="stop-color: #2374e9" />
+              <stop offset="0.6576" style="stop-color: #1478f3" />
+              <stop offset="0.794" style="stop-color: #0b7bf8" />
+              <stop offset="1" style="stop-color: #087cfa" />
+            </linearGradient>
+            <polygon
+              style="fill: url(#SVGID_3_)"
+              points="70,18.7 48.7,43.9 38.9,12.3 48.2,1.1   "
+            />
+            <linearGradient
+              id="SVGID_4_"
+              gradientUnits="userSpaceOnUse"
+              x1="10.7204"
+              y1="16.473"
+              x2="55.5237"
+              y2="90.58"
+            >
+              <stop offset="0" style="stop-color: #fe315d" />
+              <stop offset="4.023279e-002" style="stop-color: #f63462" />
+              <stop offset="0.1037" style="stop-color: #df3a71" />
+              <stop offset="0.1667" style="stop-color: #c24383" />
+              <stop offset="0.2912" style="stop-color: #ad4a91" />
+              <stop offset="0.5498" style="stop-color: #755bb4" />
+              <stop offset="0.9175" style="stop-color: #1d76ed" />
+              <stop offset="1" style="stop-color: #087cfa" />
+            </linearGradient>
+            <polygon
+              style="fill: url(#SVGID_4_)"
+              points="33.7,58.1 5.6,68.3 10.1,52.5 16,33.1 0,27.7 10.1,0 32.1,2.7 53.7,27.4   "
+            />
+          </g>
+          <g>
+            <rect
+              x="13.7"
+              y="13.5"
+              style="fill: #000000"
+              width="43.2"
+              height="43.2"
+            />
+            <rect
+              x="17.7"
+              y="48.6"
+              style="fill: #ffffff"
+              width="16.2"
+              height="2.7"
+            />
+            <polygon
+              style="fill: #ffffff"
+              points="29.4,22.4 29.4,19.1 20.4,19.1 20.4,22.4 23,22.4 23,33.7 20.4,33.7 20.4,37 29.4,37     29.4,33.7 26.9,33.7 26.9,22.4   "
+            />
+            <path
+              style="fill: #ffffff"
+              d="M38,37.3c-1.4,0-2.6-0.3-3.5-0.8c-0.9-0.5-1.7-1.2-2.3-1.9l2.5-2.8c0.5,0.6,1,1,1.5,1.3    c0.5,0.3,1.1,0.5,1.7,0.5c0.7,0,1.3-0.2,1.8-0.7c0.4-0.5,0.6-1.2,0.6-2.3V19.1h4v11.7c0,1.1-0.1,2-0.4,2.8c-0.3,0.8-0.7,1.4-1.3,2    c-0.5,0.5-1.2,1-2,1.2C39.8,37.1,39,37.3,38,37.3"
+            />
+          </g>
+        </g>
+      </svg>
     </a>
-    <span>为 Vue 打造的先进 IDE</span>
+    <span>为 Talexs 提供强大的 IDE</span>
   </section>
 
   <section id="highlights" class="vt-box-container">
     <div class="vt-box">
-      <h2>易学易用</h2>
+      <h2>基于插件</h2>
       <p>
-        基于标准 HTML、CSS 和 JavaScript 构建，拥有直观的 API 和世界一流的文档。
+        基于插件的开发方式，可以让你的项目部署简单，更加灵活。强大的插件生态让你发布与分享无比简单。
       </p>
     </div>
     <div class="vt-box">
-      <h2>性能出色</h2>
-      <p>
-        经过编译器优化、完全响应式的渲染系统，几乎不需要手动优化。
-      </p>
+      <h2>功能强大</h2>
+      <p>高度封装，完全熔和的库让你的开发极为顺手。超乎想象的创新式整合，代码与代码之间不再是代码。</p>
     </div>
     <div class="vt-box">
-      <h2>功能丰富</h2>
+      <h2>简洁精炼</h2>
       <p>
-        拥有丰富的、可渐进式集成的生态系统，可以根据规模在仅使用一个库和使用整套框架间切换自如。
+        拥有丰富的、可渐进式集成的生态系统，可以根据规模在仅使用核心库和使用整套框架间切换自如。
       </p>
     </div>
   </section>
 
-  <section id="sponsors">
-    <h2>Platinum Sponsors</h2>
-    <SponsorsGroup tier="platinum" placement="landing" />
-    <h2>Gold Sponsors</h2>
-    <SponsorsGroup tier="gold" placement="landing" />
-  </section>
+  <!-- <section id="sponsors"> -->
+    <!-- <h2>Platinum Sponsors</h2> -->
+    <!-- <SponsorsGroup tier="platinum" placement="landing" /> -->
+    <!-- <h2>Gold Sponsors</h2> -->
+    <!-- <SponsorsGroup tier="gold" placement="landing" /> -->
+  <!-- </section> -->
 
-  <NewsLetter />
+  <!-- <NewsLetter /> -->
 </template>
 
 <style scoped>
+.idea-logo {
+
+  position: relative;
+  display: inline-block;
+
+  width: 32px;
+
+}
+
 section {
   padding: 42px 32px;
 }
@@ -102,7 +229,11 @@ section {
 
 html:not(.dark) .accent,
 .dark .tagline {
-  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  background: -webkit-linear-gradient(
+    315deg,
+    var(--vt-c-blue) 25%,
+    #b323aa
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

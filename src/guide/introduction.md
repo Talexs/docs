@@ -4,74 +4,27 @@ footer: false
 
 # 简介 {#introduction}
 
-:::info 你正在阅读的是 Vue 3 的文档！
-- Vue 2 中文文档已被迁移至 [v2.cn.vuejs.org](https://v2.cn.vuejs.org/)。
-- 想从 Vue 2 升级？请参考[迁移指南](https://v3-migration.vuejs.org/)。
+:::info 你正在阅读的是 Talexs 7.0.0-Preview 的文档！
+- [官方仓库？](https://github.com/Talexs/)
+- 想从 Talexs 6.0.0+ 升级？请参考[迁移指南](https://six.migration.docs.pvpin.net/)。
 :::
 
-<style src="/@theme/styles/vue-mastery.css"></style>
-<div class="vue-mastery-link">
-  <a href="https://www.vuemastery.com/courses-path/beginner" target="_blank">
-    <div class="banner-wrapper">
-      <img class="banner" alt="Vue Mastery banner" width="96px" height="56px" src="https://storage.googleapis.com/vue-mastery.appspot.com/flamelink/media/vuemastery-graphical-link-96x56.png" />
-    </div>
-    <p class="description">在 <span>VueMastery</span> 上观看视频课程学习 Vue</p>
-    <div class="logo-wrapper">
-        <img alt="Vue Mastery Logo" width="25px" src="https://storage.googleapis.com/vue-mastery.appspot.com/flamelink/media/vue-mastery-logo.png" />
-    </div>
-  </a>
-</div>
+## 什么是 Talexs？ {#what-is-talexs}
 
-## 什么是 Vue？ {#what-is-vue}
+Talexs (可称作为 **tframe tweb tfunction 等一系列T开源套件的结合**) 是一款用于构建用户前后端的开源的 Java/JavaScript 框架。它基于 Vue 提供前端UI，基于 SpringBoot 封装后端框架，并提供了一套装配式的、插件化的编程模型，帮助你高效地开发任意前后端项目，无论是简单还是复杂。
 
-Vue (发音为 /vjuː/，类似 **view**) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面，无论任务是简单还是复杂。
+> 项目灵感来自于 Bukkit/Plugin
 
-下面是一个最基本的示例：
+- **装配式**：TFrame 通过反射提供自动装配插件下的类，无需开发者麻烦的注册编写配置文件
 
-```js
-import { createApp } from 'vue'
+- **插件化**：TFrame 会通过插件化使其快速加载，以构建更易敏捷开发与灰度部署的后端项目
 
-createApp({
-  data() {
-    return {
-      count: 0
-    }
-  }
-}).mount('#app')
-```
-
-```vue-html
-<div id="app">
-  <button @click="count++">
-    Count is: {{ count }}
-  </button>
-</div>
-```
-
-**结果展示**
-
-<script setup>
-import { ref } from 'vue'
-const count = ref(0)
-</script>
-
-<div class="demo">
-  <button @click="count++">
-    Count is: {{ count }}
-  </button>
-</div>
-
-上面的示例展示了两个 Vue 的核心功能：
-
-- **声明式渲染**：Vue 通过自己的模板语法扩展了标准 HTML，使得我们可以声明式地描述基于 JavaScript 状态输出的 HTML。
-
-- **响应性**：Vue 会自动跟踪 JavaScript 状态变化并在改变发生时响应式地更新 DOM。
-
-你可能已经有了些疑问——别担心。我们会在接下来的文档中覆盖到每一个细节。现在，请继续阅读，这会让你对 Vue 所提供的功能有一个宏观的认知。
+你可能已经有了些疑问——别担心。我们会在接下来的文档中覆盖到每一个细节。现在，请继续阅读，这会让你对 Talexs 所提供的功能有一个宏观的认知。
 
 :::tip 预备知识
-文档接下来的部分假设你对 HTML、CSS 和 JavaScript 已经基本熟悉。如果你对前端开发完全陌生，最好不要直接在一开始针对一个框架进行学习——最好是掌握了基础知识再回到这里。如果之前有其他框架的经验会很有帮助，但不是必须的。
+文档接下来的部分假设你对 Java 已经基本熟悉。如果你对后端开发完全陌生，最好不要直接在一开始针对一个框架进行学习——最好是掌握了基础知识再回到这里。如果之前有其他框架的经验会很有帮助，但不是必须的。
 :::
+**我们建议您有 Bukkit(Minecraft) 插件/模组 开发后进行学习会更加得心应手**
 
 ## 渐进式框架 {#the-progressive-framework}
 
@@ -90,7 +43,7 @@ Vue 是一个框架和生态，功能覆盖了大部分前端开发常见的需�
 
 无论再怎么灵活，关于 Vue 是如何工作的核心知识在所有这些用例中都是通用的。即使你现在只是一个初学者，随着你的不断成长，直到未来有能力实现更雄心勃勃的目标时，这一路上获得的知识都将会一直有用。如果你已经是一个老手，你可以根据你要解决的问题来选择使用 Vue 的最佳方式，同时保留相同的生产力。这就是为什么我们将 Vue 称为“渐进式框架”：它是一个可以与你共同成长、适应你不同需求的框架。
 
-## 单文件组件 {#single-file-components}
+## 插件化开发 {#single-file-components}
 
 在大多数启用了构建工具的 Vue 项目中，我们可以使用一种类似 HTML 格式的文件来书写 Vue 组件，它被称为**单文件组件** (也被称为 `*.vue` 文件，英文缩写为 **SFC**)。顾名思义，Vue 的单文件组件会将一个组件的逻辑 (JavaScript)，模板 (HTML) 和样式 (CSS) 封装在同一个文件里。下面我们将用单文件组件的格式重写上面的计数器示例：
 
@@ -118,7 +71,7 @@ button {
 
 单文件组件是 Vue 的标志性功能。如果你的用例需要进行构建，我们推荐用它来编写 Vue 组件。你可以在后续相关章节里了解更多关于[单文件组件的用法及用途](/guide/scaling-up/sfc)。但你暂时只需要知道 Vue 会帮忙处理所有这些构建配置就好。
 
-## API 风格 {#api-styles}
+## 四大基本层 {#api-styles}
 
 Vue 的组件可以按两种不同的风格书写：**选项式 API** 和**组合式 API**。
 

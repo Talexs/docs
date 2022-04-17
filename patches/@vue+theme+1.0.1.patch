@@ -1,0 +1,147 @@
+diff --git a/node_modules/@vue/theme/src/vitepress/components/VPCarbonAds.vue b/node_modules/@vue/theme/src/vitepress/components/VPCarbonAds.vue
+index 616b3de..08c42ba 100644
+--- a/node_modules/@vue/theme/src/vitepress/components/VPCarbonAds.vue
++++ b/node_modules/@vue/theme/src/vitepress/components/VPCarbonAds.vue
+@@ -41,6 +41,7 @@ if (carbonOptions) {
+ </template>
+ 
+ <style>
++
+ .VPCarbonAds {
+   margin: 28px 0;
+   padding: 20px 24px;
+diff --git a/node_modules/@vue/theme/src/vitepress/components/VPContentDoc.vue b/node_modules/@vue/theme/src/vitepress/components/VPContentDoc.vue
+index 2321c4a..44d4ae3 100644
+--- a/node_modules/@vue/theme/src/vitepress/components/VPContentDoc.vue
++++ b/node_modules/@vue/theme/src/vitepress/components/VPContentDoc.vue
+@@ -12,9 +12,9 @@ const { page, frontmatter, theme } = useData<Config>()
+ const hashMatch = /#(\w+)$/
+ 
+ const repoUrl = computed(() => {
+-  const repo = theme.value.editLink?.repo || 'vuejs/docs'
++  const repo = theme.value.editLink?.repo || 'talexs/docs'
+   const branch = repo.match(hashMatch)?.[1] || 'main'
+-  return `https://github.com/vuejs/docs/edit/${branch}/src/${page.value.relativePath}`
++  return `https://github.com/${repo}/edit/${branch}/src/${page.value.relativePath}`
+ })
+ 
+ const pageClass = computed(() => {
+@@ -37,6 +37,9 @@ const pageClass = computed(() => {
+           />
+           <slot name="aside-mid" />
+           <VPCarbonAds v-if="theme.carbonAds && frontmatter.ads !== false" />
++          <span class="ads-tip">
++            基于 VueDocs ，广告将以 Vue 展示。
++          </span>
+           <slot name="aside-bottom" />
+         </div>
+       </div>
+@@ -60,6 +63,19 @@ const pageClass = computed(() => {
+ </template>
+ 
+ <style scoped>
++
++.ads-tip {
++
++  position: relative;
++
++  top: -27px;
++
++  color: var(--vt-c-text);
++  opacity: .7;
++  font-size: 10px;
++    
++}
++
+ .VPContentDoc {
+   padding: 32px 24px 96px;
+ }
+diff --git a/node_modules/@vue/theme/src/vitepress/components/VPContentDocOutline.vue b/node_modules/@vue/theme/src/vitepress/components/VPContentDocOutline.vue
+index 508e28b..eebee9a 100644
+--- a/node_modules/@vue/theme/src/vitepress/components/VPContentDocOutline.vue
++++ b/node_modules/@vue/theme/src/vitepress/components/VPContentDocOutline.vue
+@@ -27,7 +27,7 @@ const handleClick = ({ target: el }: Event) => {
+ <template>
+   <div class="VPContentDocOutline" ref="container">
+     <div class="outline-marker" ref="marker" />
+-    <div class="outline-title">On this page</div>
++    <div class="outline-title">页面大纲</div>
+     <nav aria-labelledby="doc-outline-aria-label">
+       <span id="doc-outline-aria-label" class="visually-hidden"
+         >Table of Contents for current page</span
+diff --git a/node_modules/@vue/theme/src/vitepress/components/VPNavBarTitle.vue b/node_modules/@vue/theme/src/vitepress/components/VPNavBarTitle.vue
+index a362ba7..b7063fd 100644
+--- a/node_modules/@vue/theme/src/vitepress/components/VPNavBarTitle.vue
++++ b/node_modules/@vue/theme/src/vitepress/components/VPNavBarTitle.vue
+@@ -1,20 +1,53 @@
+ <template>
+   <a class="VPNavBarTitle" href="/">
+-    <svg class="logo" viewBox="0 0 128 128" width="24" height="24">
+-      <path
+-        fill="#42b883"
+-        d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"
+-      />
+-      <path
+-        fill="#35495e"
+-        d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"
+-      />
++    <svg class="logo" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
++      <g>
++        <title>TalexsLogo</title>
++        <rect
++          fill="none"
++          id="canvas_background"
++          height="402"
++          width="582"
++          y="-1"
++          x="-1"
++        />
++      </g>
++      <g>
++        <path
++          d="m17.5,2l0,28.8c0,0.5 -0.4,1 -1,1l-1.1,0c-0.5,0 -1,-0.4 -1,-1l0,-28.8c0,-0.5 0.4,-1 1,-1l1.1,0c0.6,0 1,0.5 1,1z"
++          class="st0"
++          id="svg_7"
++        />
++        <path
++          d="m1,-0.3l30,0c0.6,0 1,0.4 1,1l0,1.1c0,0.5 -0.4,1 -1,1l-30,0c-0.6,0 -1,-0.4 -1,-1l0,-1.1c0,-0.5 0.4,-1 1,-1z"
++          class="st0"
++          id="svg_4"
++        />
++        <path
++          d="m16.575,2.6l0,2c0,0.3 0,0.6 -0.6,0.6l-0.5,0c-0.6,0 -0.6,-0.3 -0.6,-0.6l0,-2c0,-0.3 -1.1,-0.6 0.6,-0.6l0.5,0c0,0 0.6,0.3 0.6,0.6z"
++          class="st1"
++          id="svg_9"
++        />
++        <path
++          d="m15.3,2.6l0,2c0,0.3 0,0.6 0.6,0.6l0.5,0c0.6,0 0.6,-0.3 0.6,-0.6l0,-2c0,-0.3 1.1,-0.6 -0.6,-0.6l-0.5,0c0,0 -0.6,0.3 -0.6,0.6z"
++          class="st1"
++          id="svg_9_00000013178790080041739020000004275975787946394763_"
++        />
++      </g>
+     </svg>
+-    <span class="text">Vue.js</span>
++    <span class="text">Talexs</span>
+   </a>
+ </template>
+ 
+ <style scoped>
++.st0 {
++  fill: #3b8eed;
++  stroke: #ffffff;
++}
++.st1 {
++  fill: #3b8eed;
++}
++
+ .VPNavBarTitle {
+   display: flex;
+   align-items: center;
+@@ -29,6 +62,7 @@
+ 
+ .logo {
+   position: relative;
++  transform: scale(0.5) translateX(10px);
+ }
+ 
+ .logo + .text {

@@ -12,6 +12,7 @@ interface SponsorData {
   gold: Sponsor[]
   silver: Sponsor[]
   bronze: Sponsor[]
+  pvpin: Sponsor[]
 }
 
 // shared data across instances so we load only once
@@ -61,29 +62,44 @@ onMounted(async () => {
     :class="[tier.startsWith('plat') ? 'platinum' : tier, placement]"
   >
     <template v-if="data && visible">
-      <a
-        v-for="{ url, img, name } of data[tier]"
-        class="sponsor-item"
-        :href="url"
-        target="_blank"
-        rel="sponsored noopener"
-      >
-        <picture v-if="img.endsWith('png')">
+      <a class="sponsor-item" v-if="tier === 'pvpin'" href="https://test.pvpin.net">
+        <picture>
           <source
             type="image/avif"
-            :srcset="`${base}/images/${img.replace(/\.png$/, '.avif')}`"
+            :srcset="`https://test.pvpin.net/img/logo.36deff21.png`"
           />
-          <img :src="`${base}/images/${img}`" :alt="name" />
+          <img
+            :src="`https://test.pvpin.net/img/logo.36deff21.png`"
+            :alt="name"
+          />
         </picture>
-        <img v-else :src="`${base}/images/${img}`" :alt="name" />
+        PVPIN Studio
       </a>
+      <div v-else>
+        <a
+          v-for="{ url, img, name } of data[tier]"
+          class="sponsor-item"
+          :href="url"
+          target="_blank"
+          rel="sponsored noopener"
+        >
+          <picture v-if="img.endsWith('png')">
+            <source
+              type="image/avif"
+              :srcset="`${base}/images/${img.replace(/\.png$/, '.avif')}`"
+            />
+            <img :src="`${base}/images/${img}`" :alt="name" />
+          </picture>
+          <img v-else :src="`${base}/images/${img}`" :alt="name" />
+        </a>
+        <a
+          v-if="placement !== 'page' && tier !== 'special'"
+          href="/sponsor/"
+          class="sponsor-item action"
+          >Your logo</a
+        >
+      </div>
     </template>
-    <a
-      v-if="placement !== 'page' && tier !== 'special'"
-      href="/sponsor/"
-      class="sponsor-item action"
-      >Your logo</a
-    >
   </div>
 </template>
 
@@ -113,7 +129,7 @@ onMounted(async () => {
   align-items: center;
   border-radius: 2px;
   transition: background-color 0.2s ease;
-  height: calc(var(--max-width) / 2 - 6px);
+  min-height: calc(var(--max-width) / 2 - 6px);
 }
 .sponsor-item.action {
   font-size: 11px;

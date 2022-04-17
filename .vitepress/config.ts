@@ -16,8 +16,8 @@ const nav = [
       { text: '快速开始', link: '/guide/quick-start' },
       { text: '风格指南', link: '/style-guide/' },
       {
-        text: '从 Vue 2 迁移',
-        link: 'https://v3-migration.vuejs.org/'
+        text: '从 Talexs 6.0.0+ 迁移',
+        link: '/guide/migrate-from-talexs-6.0.0',
       }
     ]
   },
@@ -27,10 +27,6 @@ const nav = [
     link: '/api/'
   },
   {
-    text: 'Playground',
-    link: 'https://sfc.vuejs.org'
-  },
-  {
     text: '生态系统',
     activeMatch: `^/ecosystem/`,
     items: [
@@ -38,22 +34,7 @@ const nav = [
         text: '资源',
         items: [
           { text: '合作伙伴', link: '/ecosystem/partners' },
-          { text: '主题', link: '/ecosystem/themes' },
-          { text: '工作', link: 'https://vuejobs.com/?ref=vuejs' },
-          { text: 'T-Shirt 商店', link: 'https://vue.threadless.com/' }
-        ]
-      },
-      {
-        text: '视频课程',
-        items: [
-          {
-            text: 'Vue Mastery',
-            link: 'https://www.vuemastery.com/courses/'
-          },
-          {
-            text: 'Vue School',
-            link: 'https://vueschool.io/?friend=vuejs&utm_source=Vuejs.org&utm_medium=Link&utm_content=Navbar%20Dropdown'
-          }
+          { text: '主题', link: '/ecosystem/themes' }
         ]
       },
       {
@@ -65,15 +46,6 @@ const nav = [
           },
           { text: '论坛', link: 'https://forum.vuejs.org/' },
           { text: 'DEV Community', link: 'https://dev.to/t/vue' }
-        ]
-      },
-      {
-        text: 'News',
-        items: [
-          { text: '博客', link: 'https://blog.vuejs.org/' },
-          { text: 'Twitter', link: 'https://twitter.com/vuejs' },
-          { text: '新闻', link: 'https://news.vuejs.org/' },
-          { text: '活动', link: 'https://events.vuejs.org/' }
         ]
       }
     ]
@@ -108,10 +80,6 @@ const nav = [
         link: 'https://www.youtube.com/watch?v=OrxmtDw4pVI'
       }
     ]
-  },
-  {
-    text: '赞助者',
-    link: '/sponsor/'
   }
 ]
 
@@ -131,67 +99,57 @@ export const sidebar = {
       text: '基础',
       items: [
         {
-          text: '创建一个应用',
+          text: '创建一个插件',
           link: '/guide/essentials/application'
         },
         {
-          text: '模板语法',
+          text: '自动扫描装配',
           link: '/guide/essentials/template-syntax'
         },
         {
-          text: '响应式基础',
+          text: '应用基础',
           link: '/guide/essentials/reactivity-fundamentals'
         },
         {
-          text: '计算属性',
+          text: '事件系统',
           link: '/guide/essentials/computed'
         },
         {
-          text: '类与样式绑定',
+          text: '数据库连接',
           link: '/guide/essentials/class-and-style'
         },
         {
-          text: '条件渲染',
+          text: '自动存储',
           link: '/guide/essentials/conditional'
         },
-        { text: '列表渲染', link: '/guide/essentials/list' },
+        { text: '命令模块', link: '/guide/essentials/list' },
         {
-          text: '事件处理',
+          text: '通讯基础',
           link: '/guide/essentials/event-handling'
         },
-        { text: '表单输入绑定', link: '/guide/essentials/forms' },
-        {
-          text: '生命周期',
-          link: '/guide/essentials/lifecycle'
-        },
-        { text: '侦听器', link: '/guide/essentials/watchers' },
-        { text: '模板 ref', link: '/guide/essentials/template-refs' },
-        {
-          text: '组件基础',
-          link: '/guide/essentials/component-basics'
-        }
+        { text: '自动控制', link: '/guide/essentials/forms' }
       ]
     },
     {
-      text: '深入组件',
+      text: '深入插件',
       items: [
         {
-          text: '注册',
+          text: '自定义装配',
           link: '/guide/components/registration'
         },
-        { text: 'Prop', link: '/guide/components/props' },
-        { text: '事件', link: '/guide/components/events' },
+        { text: '阈值控制', link: '/guide/components/props' },
+        { text: '粘性事件', link: '/guide/components/events' },
         {
-          text: '透传 Attribute',
+          text: '前置插件',
           link: '/guide/components/attrs'
         },
-        { text: '插槽', link: '/guide/components/slots' },
+        { text: '插件插槽', link: '/guide/components/slots' },
         {
           text: '依赖注入',
           link: '/guide/components/provide-inject'
         },
         {
-          text: '异步组件',
+          text: '异步应用',
           link: '/guide/components/async'
         }
       ]
@@ -200,7 +158,7 @@ export const sidebar = {
       text: '可重用性',
       items: [
         {
-          text: '组合式函数',
+          text: 'Utils',
           link: '/guide/reusability/composables'
         },
         {
@@ -211,16 +169,16 @@ export const sidebar = {
       ]
     },
     {
-      text: '内置组件',
+      text: '内置功能',
       items: [
-        { text: 'Transition', link: '/guide/built-ins/transition' },
+        { text: 'Limiter', link: '/guide/built-ins/transition' },
         {
-          text: 'TransitionGroup',
+          text: 'Handler',
           link: '/guide/built-ins/transition-group'
         },
-        { text: 'KeepAlive', link: '/guide/built-ins/keep-alive' },
-        { text: 'Teleport', link: '/guide/built-ins/teleport' },
-        { text: 'Suspense', link: '/guide/built-ins/suspense' }
+        { text: 'Network', link: '/guide/built-ins/keep-alive' },
+        { text: 'Config', link: '/guide/built-ins/teleport' },
+        { text: 'CompAdapter', link: '/guide/built-ins/suspense' }
       ]
     },
     {
@@ -547,22 +505,13 @@ export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
 
   lang: 'zh-CN',
-  title: 'Vue.js',
-  description: 'Vue.js - 渐进式的 JavaScript 框架',
+  title: 'Talexs',
+  description: 'Talexs - 超乎想象的 Java 框架',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
   scrollOffset: 'header',
 
   head: [
-    ['meta', { name: 'twitter:site', content: '@vuejs' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    [
-      'meta',
-      {
-        name: 'twitter:image',
-        content: 'https://vuejs.org/images/logo.png'
-      }
-    ],
     [
       'link',
       {
@@ -594,9 +543,9 @@ export default defineConfigWithTheme<ThemeConfig>({
     sidebar,
 
     algolia: {
-      indexName: 'vuejs',
-      appId: 'ML0LEBN7FQ',
-      apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
+      indexName: 'talexs',
+      appId: 'X8M9GXZFAB',
+      apiKey: 'fb77bdb69488c107f420771e4b62dcec',
       searchParameters: {
         facetFilters: ['version:v3']
       }
@@ -609,13 +558,11 @@ export default defineConfigWithTheme<ThemeConfig>({
 
     socialLinks: [
       { icon: 'languages', link: '/translations/' },
-      { icon: 'github', link: 'https://github.com/vuejs/' },
-      { icon: 'twitter', link: 'https://twitter.com/vuejs' },
-      { icon: 'discord', link: 'https://discord.com/invite/HBherRA' }
+      { icon: 'github', link: 'https://github.com/talexs/' }
     ],
 
     editLink: {
-      repo: 'vuejs-translations/docs-zh-cn',
+      repo: 'talexs/docs',
       text: '在 GitHub 上编辑此页'
     },
 
@@ -624,7 +571,7 @@ export default defineConfigWithTheme<ThemeConfig>({
         text: 'MIT License',
         link: 'https://opensource.org/licenses/MIT'
       },
-      copyright: `Copyright © 2014-${new Date().getFullYear()} Evan You`
+      copyright: `Copyright © 2020-${new Date().getFullYear()} TalexDreamSoul`
     }
   },
 

@@ -68,10 +68,10 @@ function useToggleFn(
       @mousedown="removeOutline"
       @blur="restoreOutline"
     >
-      <span>API 风格偏好</span>
-      <VTIconChevronDown class="vt-link-icon" :class="{ open: isOpen }" />
+      <span>Talexs - 超乎想象的Java框架</span>
+      <!-- <VTIconChevronDown class="vt-link-icon" :class="{ open: isOpen }" /> -->
     </button>
-    <div id="preference-switches" :hidden="!isOpen" :aria-hidden="!isOpen">
+    <!-- <div id="preference-switches" :hidden="!isOpen" :aria-hidden="!isOpen">
       <div class="switch-container">
         <label class="options-label" @click="toggleCompositionAPI(false)"
           >选项式</label
@@ -112,7 +112,7 @@ function useToggleFn(
           >?</a
         >
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
