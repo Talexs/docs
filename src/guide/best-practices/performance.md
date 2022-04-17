@@ -16,7 +16,7 @@ Vue 的设计对于大多数常见的使用情况来说都是性能优秀的，�
 
 虽然最理想的情况是将两者都最大化，但是不同的前端架构往往会影响到在这些方面是否能达到更理想的性能。此外，你所构建的应用程序的类型极大地影响了你在性能方面应该优先考虑的问题。因此，确保最佳性能的第一步是为你的应用类型挑选合适的架构：
 
-- 查看 [使用 Vue 的多种方式](/guide/extras/ways-of-using-vue.html) 这一章看看如何用不同的方式围绕 Vue 组织架构。
+- 查看 [使用 Vue 的多种方式](/guide/extras/ways-of-using-tframe.html) 这一章看看如何用不同的方式围绕 Vue 组织架构。
 
 - Jason Miller 在 [应用标本](https://jasonformat.com/application-holotypes/) 一文中讨论了 Web 应用的类型以及它们各自的理想的实现/交付方式。
 
