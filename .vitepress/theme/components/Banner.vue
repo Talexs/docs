@@ -14,17 +14,17 @@ let open = $ref(true)
 function dismiss() {
   open = false
   document.documentElement.classList.add('banner-dismissed')
-  localStorage.setItem(`vue-docs-banner-${__VUE_BANNER_ID__}`, 'true')
+  localStorage.setItem(`talexs-docs-banner-${__VUE_BANNER_ID__}`, 'true')
 }
 </script>
 
 <template>
   <div class="banner" v-if="open">
-    Vue 3 is now the new default version!
+    Talexs 正式成为 PVPIN Studio 的后端框架！
     <a
-      href="https://blog.vuejs.org/posts/vue-3-as-the-new-default.html"
+      href="https://github.com/PVPIN Studio"
       target="_blank"
-      >Learn more</a
+      >了解更多</a
     >
   </div>
 </template>
@@ -49,7 +49,7 @@ html:not(.banner-dismissed) {
   font-size: 12px;
   font-weight: 600;
   color: #fff;
-  background-color: var(--vt-c-green);
+  background-color: var(--vt-c-blue);
 }
 
 .banner-dismissed .banner {

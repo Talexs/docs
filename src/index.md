@@ -1,6 +1,6 @@
 ---
 page: true
-title: Vue.js - The Progressive JavaScript Framework
+title: Talexs - 超乎想象的Java框架
 ---
 
 <script setup>

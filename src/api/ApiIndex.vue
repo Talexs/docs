@@ -66,9 +66,9 @@ function slugify(text: string): string {
 <template>
   <div id="api-index">
     <div class="header">
-      <h1>API Reference</h1>
+      <h1>API 参考</h1>
       <div class="api-filter">
-        <label for="api-filter">Filter</label>
+        <label for="api-filter">过滤</label>
         <input
           type="search"
           placeholder="Enter keyword"
@@ -101,7 +101,7 @@ function slugify(text: string): string {
     </div>
 
     <div v-if="!filtered.length" class="no-match">
-      No API matching "{{ query }}" found.
+      没有匹配到 API "{{ query }}"
     </div>
   </div>
 </template>

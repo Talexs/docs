@@ -1,8 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <style>
-    .st0 { fill: #42B883; }
-    .st1 { fill: #35495E; }
-  </style>
-  <path class="st0" d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z" />
-  <path class="st1" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z" />
+<svg width="377" height="352" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_1_blur">
+   <feGaussianBlur stdDeviation="0.5" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>TalexsLogo</title>
+  <g id="svg_15">
+   <!-- <rect filter="url(#svg_1_blur)" stroke-width="3" stroke="#000" rx="25" id="svg_1" height="342" width="367" y="5" x="5" fill="#ffffff00"/> -->
+   <rect transform="rotate(90 187.5 183.5)" stroke="#ffffff" rx="8" id="svg_7" height="25" width="257" y="171" x="59" fill="#3b8eed"/>
+   <rect stroke="#ffffff" rx="8" id="svg_4" height="25" width="257" y="49" x="60" fill="#3b8eed"/>
+   <rect transform="rotate(90 187.5 90)" stroke="#ffffff" stroke-opacity="0" rx="8" id="svg_9" height="23" width="44" y="78.5" x="165.5" fill="#3b8eed"/>
+   <!-- <ellipse stroke="#ffffff" ry="12.66667" rx="13" id="svg_10" cy="68" cx="184.16667" stroke-opacity="0" fill="#3b8eed"/> -->
+   <!-- <ellipse stroke="#ffffff" ry="12.66667" rx="13" id="svg_12" cy="68" cx="184.16667" stroke-opacity="0" fill="#3b8eed"/> -->
+   <!-- <ellipse stroke="#ffffff" ry="12.66667" rx="13" id="svg_13" cy="68.66666" cx="190.83334" stroke-opacity="0" fill="#3b8eed"/> -->
+  </g>
+ </g>
 </svg>

@@ -1,25 +1,26 @@
-# vuejs.org
+# Vuejs.org 新版中文文档
 
-## Contributing
+这里是即将焕然一新的 [cn.vuejs.org](https://staging-cn.vuejs.org)。
 
-This site is built with [VitePress](https://github.com/vuejs/vitepress) and depends on [@vue/theme](https://github.com/vuejs/vue-theme). Site content is written in Markdown format located in `src`. For simple edits, you can directly edit the file on GitHub and generate a Pull Request.
+你也可以预览对应的英文原文文档 [https://staging.vuejs.org](https://staging.vuejs.org) 及其代码仓库 [vuejs/docs](https://github.com/vuejs/docs)。
 
-For local development, [pnpm](https://pnpm.io/) is preferred as package manager:
+## 如何在本地编辑和预览该网站
 
-```bash
+本站基于 [VitePress](https://github.com/vuejs/vitepress) 和 [@vue/theme](https://github.com/vuejs/vue-theme) 建立。网站内容以 Markdown 格式书写，位于 `src` 文件夹中。
+
+确保 [Node.js](https://nodejs.org/en/) 版本 >= 16 以及使用 [pnpm](https://pnpm.io/) 作为包管理工具：
+
+```sh
 pnpm i
 pnpm run dev
 ```
 
-This project requires Node.js to be `v14.0.0` or higher, because we use new JavaScript features in our code, such as optional chaining.
+## 如何参与贡献
 
+目前网站处在集中翻译与校对的阶段，欢迎大家来[这个 issue](https://github.com/vuejs-translations/docs-zh-cn/issues/8) 查阅相关细节。
 
-## Working on the content
+另外在参与具体的贡献之前，有劳访问我们的 [wiki](https://github.com/vuejs-translations/docs-zh-cn/wiki) 了解相关注意事项。
 
-- See VitePress docs on supported [Markdown Extensions](https://vitepress.vuejs.org/guide/markdown.html) and the ability to [use Vue syntax inside markdown](https://vitepress.vuejs.org/guide/using-vue.html).
+## 贡献者列表
 
-- See the [Writing Guide](https://github.com/vuejs/docs/blob/main/.github/contributing/writing-guide.md) for our rules and recommendations on writing and maintaining documentation content.
-
-## Working on the theme
-
-If changes need to made for the theme, check out the [instructions for developing the theme alongside the docs](https://github.com/vuejs/vue-theme#developing-with-real-content).
+最新的文档/翻译贡献情况可以参阅 GitHub 提供的 [contributors](https://github.com/vuejs-translations/docs-zh-cn/graphs/contributors) 页面。

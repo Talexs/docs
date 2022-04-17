@@ -58,6 +58,7 @@ function parsePageHeaders(link: string) {
         .replace(/<sup class=.*/, '')
         .replace(/\\</g, '<')
         .replace(/`([^`]+)`/g, '$1')
+        .replace(/\{#([a-zA-Z0-9]+)\}/g, '') // hidden anchor tag
         .trim()
     )
   }

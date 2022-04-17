@@ -6,9 +6,8 @@ const { frontmatter } = useData()
 
 <template>
   <div v-if="frontmatter.sponsors !== false">
-    <a class="sponsors-aside-text" href="/sponsor/">Sponsors</a>
-    <SponsorsGroup tier="special" />
-    <SponsorsGroup tier="platinum" />
+    <a class="sponsors-aside-text" href="https://test.pvpin.net">独家支持</a>
+    <SponsorsGroup tier="pvpin" />
   </div>
 </template>
 
