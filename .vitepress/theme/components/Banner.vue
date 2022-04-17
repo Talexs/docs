@@ -22,7 +22,7 @@ function dismiss() {
   <div class="banner" v-if="open">
     Talexs 正式成为 PVPIN Studio 的后端框架！
     <a
-      href="https://github.com/PVPIN Studio"
+      href="https://github.com/PVPINStudio"
       target="_blank"
       >了解更多</a
     >
