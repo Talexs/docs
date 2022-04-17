@@ -112,3 +112,7 @@ draft.md
 
 # IDEs
 .idea
+
+# package config
+pnpm-lock.yaml
+package-lock.json

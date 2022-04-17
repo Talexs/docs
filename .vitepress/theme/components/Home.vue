@@ -1,7 +1,7 @@
 <template>
   <section id="hero">
     <h1 class="tagline">
-      <span class="accent">超乎想象</span>
+      <span class="accent">超乎想象的</span>
       <br />Java-SpringBoot 框架
     </h1>
     <p class="description">
