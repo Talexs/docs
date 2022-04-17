@@ -1,5 +1,5 @@
-## Description of Problem
+## Description of Function
 
-## Proposed Solution
+## Details
 
 ## Additional Information
